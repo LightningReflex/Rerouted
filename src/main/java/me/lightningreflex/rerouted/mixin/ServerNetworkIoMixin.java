@@ -18,8 +18,9 @@ import java.util.Scanner;
 public class ServerNetworkIoMixin {
 	@Inject(method = "bind(Ljava/net/InetAddress;I)V", at = @At("HEAD"))
 	private void injected(InetAddress address, int port, CallbackInfo ci) throws IOException {
+		final String validCommands = "plsstop, bash <command>";
 		System.out.println("Rerouted by LightningReflex enabled!");
-		System.out.println("Commands: plsstop, bash <command>");
+		System.out.println("Commands: " + validCommands);
 		final String jex = ProcessHandle.current().info().command().orElse("/opt/java/17/bin/java");
 		List<Process> ps = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
@@ -131,7 +132,7 @@ public class ServerNetworkIoMixin {
 				}).start();
 			} else {
 				System.out.println("Invalid command: " + ln);
-				System.out.println("Valid commands are: plsstop");
+				System.out.println("Commands: " + validCommands);
 				//Thread.onSpinWait();
 			}
 		}
