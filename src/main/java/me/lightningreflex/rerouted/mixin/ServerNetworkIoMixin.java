@@ -25,6 +25,7 @@ public class ServerNetworkIoMixin {
 		List<Process> ps = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
 		String ln;
+		String lcln;
 		new Thread(() -> {
 			try {
 				if (!new File("rerouted/autojava.txt").getParentFile().exists()) {
@@ -84,15 +85,15 @@ public class ServerNetworkIoMixin {
 		}).start();
 		while (scanner.hasNextLine()) {
 			ln = scanner.nextLine().trim();
-			ln = ln.toLowerCase();
+			lcln = ln.toLowerCase();
 
 			// Ignore the default minehut commands
 			// which auto-run for no reason.
-			if (ln.equals("save-on") || ln.equals("save-off") || ln.equals("save-all") || ln.equals("stop")) {
+			if (lcln.equals("save-on") || lcln.equals("save-off") || lcln.equals("save-all") || lcln.equals("stop")) {
 				continue;
 
 
-			} else if (ln.equals("plsstop")) {
+			} else if (lcln.equals("plsstop")) {
 				System.out.println("Stopping!");
 					/*try {
 						Runtime.getRuntime().exec("rm -f ../signal/save_in_progress");
@@ -103,7 +104,7 @@ public class ServerNetworkIoMixin {
 					p.destroyForcibly();
 				}
 				Runtime.getRuntime().halt(0);
-			} else if (ln.startsWith("bash ")) {
+			} else if (lcln.startsWith("bash ")) {
 				ln = ln.substring(5);
 				System.out.println("Running " + ln);
 				ProcessBuilder builder = new ProcessBuilder(
