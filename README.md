@@ -35,7 +35,7 @@ Here're some of the features:
 
 <p>4. Put your desired jar file in rerouted/gaming.</p>
 
-<p>5. Type this 2-4 times in the console until it stops.</p>
+<p>5. Type this 2-4 times in the console until the server stops.</p>
 
 ```
 plsstop
