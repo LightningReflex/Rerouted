@@ -44,6 +44,6 @@ plsstop
 <p>&nbsp;</p>
 
 
-<h2>💖Like my work?</h2>
+<h2>💖 Like my work?</h2>
 
 If you want to support me contact me here<p>https://discord.gg/C6RQMtXXcV</p>
