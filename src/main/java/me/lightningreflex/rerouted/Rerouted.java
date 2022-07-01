@@ -7,6 +7,6 @@ import java.util.Objects;
 public class Rerouted implements ModInitializer {
 	@Override
 	public void onInitialize() {
-		System.out.println("Mod initialized");
+		System.out.println("Rerouter initialized");
 	}
 }
