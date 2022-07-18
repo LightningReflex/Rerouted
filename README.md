@@ -12,7 +12,7 @@
 
 <h2>✈ Features</h2>
 
-Here're some of the features:
+Here are some of the features:
 
 *   Run any jar file you want
 <p>&nbsp;</p>
