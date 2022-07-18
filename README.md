@@ -10,7 +10,7 @@
 [https://streamable.com/w0rbj0](https://streamable.com/w0rbj0)
 <p>&nbsp;</p>
 
-<h2>✈ Features</h2>
+<h2>⭐ Features</h2>
 
 Here are some of the features:
 
